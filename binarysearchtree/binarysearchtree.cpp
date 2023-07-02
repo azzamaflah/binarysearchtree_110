@@ -37,7 +37,7 @@ public:
 
 		Node* parent = NULL; 
 		Node* currentNode = NULL;
-		search(element, parent, currentNode); // Locate the node which will be parent of the node to be inserted  
+		search(element, parent, currentNode); // Locate the node which will be parent of the node to be inserted 
 
 		if (parent == NULL) // if the parent is NULL (Tree is empty)
 		{
@@ -55,12 +55,13 @@ public:
 			parent->rightchild = newNode; // Make the right child of the parent point to the new node
 		}
 	}
- 
+
+	void search(string element, Node*& parent, Node*& currentNode)
 	{
 		// this function searches the currentNode of the specified Node as well as the current Node of its parent
 		currentNode = ROOT;
-		parent = NULL; 
-		while ((currentNode != NULL) && (currentNode->info != element))
+		parent = NULL;
+		while ((currentNode != NULL) && (currentNode->info != element)) 
 		{
 			parent = currentNode; if (element < currentNode->info)
 				if (element < currentNode->info)
